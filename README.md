@@ -1,1 +1,1 @@
-Archivo de propiedades para el Proyecto de Youtube "Amigo Programador"
+Repositorio de archivos propiedades para el Proyecto del canal de Youtube "Amigo Programador"
