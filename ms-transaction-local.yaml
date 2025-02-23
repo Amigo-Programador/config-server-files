@@ -1,7 +1,7 @@
 application:
   consume:
     msdebitcard:
-      url: http://localhost:8081/debitcard
+      url: http://localhost:8082/debitcard
 
 spring:
   application:
