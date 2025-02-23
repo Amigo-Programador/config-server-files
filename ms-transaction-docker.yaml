@@ -1,0 +1,13 @@
+server:
+  port: '8083'
+spring:
+  application:
+    name: ms-transaction
+  data:
+    mongodb:
+      database: mstransaction
+      host: mongodb-dockercompose
+      port: '27017'
+  kafka:
+    producer:
+      bootstrap-servers: kafka:9092
