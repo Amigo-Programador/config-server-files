@@ -1,11 +1,11 @@
 server:
-  port: 8082
+  port: 8081
 spring:
   application:
     name: ms-client
   data:
     mongodb:
-      database: msdebitcard
+      database: msclient
       port: '27017'
       host: mongodb-dockercompose
   jackson:
