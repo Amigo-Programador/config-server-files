@@ -2,16 +2,18 @@ application:
   consume:
     msdebitcard:
       url: http://msdebitcard:8082/debitcard
-server:
-  port: '8083'
 spring:
   application:
     name: ms-transaction
   data:
     mongodb:
       database: mstransaction
-      host: mongodb-dockercompose
       port: '27017'
+      host: mongodb-dockercompose
   kafka:
     producer:
       bootstrap-servers: kafka:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+server:
+  port: '8083'
