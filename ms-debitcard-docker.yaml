@@ -15,6 +15,6 @@ spring:
     mongodb:
       database: msdebitcard
       port: '27017'
-      host: mongodb-dockercompose
+      host: mongodb-container
 server:
   port: '8082'
