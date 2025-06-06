@@ -1,11 +1,9 @@
-application:
-  consume:
-    msdebitcard:
-      url: http://localhost:8082/debitcard
-
 spring:
   application:
     name: ms-transaction
+    consume:
+      msdebitcard:
+        url: http://localhost:8082/debitcard
   data:
     mongodb:
       database: mstransaction
