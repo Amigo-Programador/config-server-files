@@ -9,7 +9,7 @@ spring:
     mongodb:
       database: mstransaction
       port: '27017'
-      host: mongodb-container
+      host: mongodb-dockercompose
   kafka:
     producer:
       bootstrap-servers: kafka:9092

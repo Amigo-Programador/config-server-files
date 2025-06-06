@@ -1,5 +1,3 @@
-server:
-  port: 8081
 spring:
   application:
     name: ms-client
@@ -7,11 +5,12 @@ spring:
     mongodb:
       database: msclient
       port: '27017'
-      host: mongodb-container
+      host: mongodb-dockercompose
   jackson:
     default-property-inclusion: NON_NULL
-
 management:
   endpoint:
     health:
       probes.enabled: true
+server:
+  port: 8081
