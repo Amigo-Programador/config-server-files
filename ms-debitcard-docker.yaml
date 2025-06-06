@@ -4,16 +4,16 @@ spring:
     consume:
       msclient:
         url: http://msclient:8080/client
+  data:
+    mongodb:
+      database: msdebitcard
+      port: '27017'
+      host: mongodb-dockercompose           
   kafka:
     consumer:
       bootstrap-servers: kafka:9092
       group-id: consumer
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-  data:
-    mongodb:
-      database: msdebitcard
-      port: '27017'
-      host: mongodb-dockercompose      
 server:
   port: '8082'

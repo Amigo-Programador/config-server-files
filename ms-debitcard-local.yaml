@@ -1,14 +1,4 @@
-application:
-  consume:
-    msclient:
-      url: http://localhost:8081/client
 spring:
-  kafka:
-    consumer:
-      bootstrap-servers: localhost:9092
-      group-id: consumer
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
   application:
     name: ms-debitcard
     consume:
@@ -18,7 +8,13 @@ spring:
     mongodb:
       database: msdebitcard
       port: '27017'
-      host: localhost
+      host: localhost        
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: consumer
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 server:
   port: '8082'
   
