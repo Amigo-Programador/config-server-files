@@ -12,10 +12,10 @@ spring:
               uri: http://localhost:8081
               predicates:
                 - Path=/client/**
-              filters:
-                - RewritePath=/client/(?<segment>.*), /client/${segment}
-                - AddRequestHeader=X-Request-Example, Gateway-Request
-                - AddResponseHeader=X-Response-Example, Gateway-Response
+              #filters:
+              #  - RewritePath=/client/(?<segment>.*), /client/${segment}
+              #  - AddRequestHeader=X-Request-Example, Gateway-Request
+              #  - AddResponseHeader=X-Response-Example, Gateway-Response
             - id: ms-debitcard-route
               uri: http://localhost:8082
               predicates:
