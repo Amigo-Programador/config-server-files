@@ -11,14 +11,20 @@ spring:
             - id: ms-client-route
               uri: http://localhost:8081
               predicates:
-                - Path=/gateway/client/**
+                - Path=/client/**
               filters:
-                - RewritePath=/gateway/client/(?<segment>.*), /client/${segment}
+                - AddResponseHeader=X-API, Amigo-Programador-Gateway
             - id: ms-debitcard-route
               uri: http://localhost:8082
               predicates:
                 - Path=/debitcard/**
               filters:
                 - AddResponseHeader=X-API, Amigo-Programador-Gateway
+            - id: ms-transference-route
+              uri: http://localhost:8083
+              predicates:
+                - Path=/debitcard/**
+              filters:
+                - AddResponseHeader=X-API, Amigo-Programador-Gateway                
 server:
   port: 9999
