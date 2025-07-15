@@ -4,8 +4,8 @@ spring:
   data:
     mongodb:
       database: msclient
-      port: '27017'
-      host: mongodb-dockercompose
+      host: mongodb
+      port: '27017'      
   jackson:
     default-property-inclusion: NON_NULL
 management:

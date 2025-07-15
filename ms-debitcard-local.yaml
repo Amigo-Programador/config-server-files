@@ -7,8 +7,8 @@ spring:
   data:
     mongodb:
       database: msdebitcard
+      host: localhost
       port: '27017'
-      host: localhost        
   kafka:
     consumer:
       bootstrap-servers: localhost:9092
