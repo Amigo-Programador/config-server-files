@@ -3,7 +3,7 @@ spring:
     name: ms-transaction
     consume:
       msdebitcard:
-        url: http://msdebitcard:8082/debitcard
+        url: http://ms-debitcard:8082/debitcard
   data:
     mongodb:
       database: mstransaction
