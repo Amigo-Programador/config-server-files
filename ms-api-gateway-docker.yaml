@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      server:
+        webflux:
+          routes:
+            - id: ms-client-route
+              uri: http://msclient:8081
+              predicates:
+                - Path=/client/**
+              filters:
+                - AddResponseHeader=X-API, Amigo-Programador-Gateway
+            - id: ms-debitcard-route
+              uri: http://msdebitcard:8082
+              predicates:
+                - Path=/debitcard/**
+              filters:
+                - AddResponseHeader=X-API, Amigo-Programador-Gateway
+            - id: ms-transference-route
+              uri: http://mstransaction:8083
+              predicates:
+                - Path=/transaction/**
+              filters:
+                - AddResponseHeader=X-API, Amigo-Programador-Gateway                
+server:
+  port: 9999
