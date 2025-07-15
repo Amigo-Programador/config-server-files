@@ -20,10 +20,10 @@ spring:
                 - Path=/debitcard/**
               filters:
                 - AddResponseHeader=X-API, Amigo-Programador-Gateway
-            - id: ms-transference-route
+            - id: ms-transaction-route
               uri: http://localhost:8083
               predicates:
-                - Path=/debitcard/**
+                - Path=/transaction/**
               filters:
                 - AddResponseHeader=X-API, Amigo-Programador-Gateway                
 server:
