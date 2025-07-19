@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+          - id: ms-client-route
+            uri: http://localhost:8081
+            predicates:
+            - Path=/client/**
+            filters:
+            - AddResponseHeader=X-API, Amigo-Programador-Gateway
+          - id: ms-debitcard-route
+            uri: http://localhost:8082
+            predicates:
+            - Path=/debitcard/**
+            filters:
+            - AddResponseHeader=X-API, Amigo-Programador-Gateway
+          - id: ms-transaction-route
+            uri: http://localhost:8083
+            predicates:
+            - Path=/transaction/**
+            filters:
+            - AddResponseHeader=X-API, Amigo-Programador-Gateway-
+server:
+  port: 9999
