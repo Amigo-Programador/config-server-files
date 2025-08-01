@@ -3,12 +3,12 @@ spring:
     name: ms-transaction
     consume:
       msdebitcard:
-        url: http://msdebitcard:8082/debitcard
+        url: http://ms-debitcard:8082/debitcard
   data:
     mongodb:
       database: mstransaction
       port: '27017'
-      host: mongodb-dockercompose
+      host: amigoprogramador-mongodb
   kafka:
     producer:
       bootstrap-servers: kafka:9092

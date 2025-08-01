@@ -3,12 +3,12 @@ spring:
     name: ms-debitcard
     consume:
       msclient:
-        url: http://msclient:8080/client
+        url: http://ms-client:8080/client
   data:
     mongodb:
       database: msdebitcard
       port: '27017'
-      host: mongodb-dockercompose           
+      host: amigoprogramador-mongodb
   kafka:
     consumer:
       bootstrap-servers: kafka:9092
