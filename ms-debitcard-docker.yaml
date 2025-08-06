@@ -8,7 +8,7 @@ spring:
     mongodb:
       database: msdebitcard
       port: '27017'
-      host: amigoprogramador-mongodb
+      host: amigo-programador-mongodb
   kafka:
     consumer:
       bootstrap-servers: kafka:9092

@@ -8,7 +8,7 @@ spring:
     mongodb:
       database: mstransaction
       port: '27017'
-      host: amigoprogramador-mongodb
+      host: amigo-programador-mongodb
   kafka:
     producer:
       bootstrap-servers: kafka:9092

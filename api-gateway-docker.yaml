@@ -23,6 +23,6 @@ spring:
             predicates:
             - Path=/transaction/**
             filters:
-            - AddResponseHeader=X-API, Amigo-Programador-Gateway-
+            - AddResponseHeader=X-API, Amigo-Programador-Gateway
 server:
   port: 9999

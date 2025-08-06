@@ -5,7 +5,7 @@ spring:
     mongodb:
       database: msclient
       port: '27017'
-      host: amigoprogramador-mongodb
+      host: amigo-programador-mongodb
   jackson:
     default-property-inclusion: NON_NULL
 management:
