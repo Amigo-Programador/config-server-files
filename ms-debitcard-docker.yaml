@@ -3,7 +3,7 @@ spring:
     name: ms-debitcard
     consume:
       msclient:
-        url: http://ms-client:8080/client
+        url: http://ms-client/client
   data:
     mongodb:
       database: msdebitcard

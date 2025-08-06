@@ -7,19 +7,19 @@ spring:
         webflux:
           routes:
           - id: ms-client-route
-            uri: http://ms-client:8081
+            uri: http://ms-client
             predicates:
             - Path=/client/**
             filters:
             - AddResponseHeader=X-API, Amigo-Programador-Gateway
           - id: ms-debitcard-route
-            uri: http://ms-debitcard:8082
+            uri: http://ms-debitcard
             predicates:
             - Path=/debitcard/**
             filters:
             - AddResponseHeader=X-API, Amigo-Programador-Gateway
           - id: ms-transaction-route
-            uri: http://ms-transaction:8083
+            uri: http://ms-transaction
             predicates:
             - Path=/transaction/**
             filters:
