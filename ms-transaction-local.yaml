@@ -16,3 +16,7 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 server:
   port: '8083'
+logging:
+  level:
+    org.springframework.data.mongodb.core: DEBUG
+    org.springframework.data.convert: DEBUG
